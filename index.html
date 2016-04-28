@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+	<title>Typescript Calculator</title>
+</head>
+<html>
+	<body>
+	<script type="text/javascript"" src="calc.js"></script>
+	<script>
+		window.onload = function(){
+			var calc = new Calculator();
+			calc.addDigit('3');
+			calc.addOperator('+');
+			calc.addDigit('4');
+			calc.showResult();
+		}
+	</script>
+		<div id="display">0</div>
+		<ul id="numbers">
+			<li><button id="1" onclick="(function(){calc.addDigit('1');})">1</button></li>
+			<li><button id="2" onclick="(function(){calc.addDigit('2');})">2</button></li>
+			<li><button id="3" onclick="(function(){calc.addDigit('3');})">3</button></li>
+			<li><button id="4" onclick="(function(){calc.addDigit('4');})">4</button></li>
+			<li><button id="5" onclick="(function(){calc.addDigit('5');})">5</button></li>
+			<li><button id="6" onclick="(function(){calc.addDigit('6');})">6</button></li>
+			<li><button id="7" onclick="(function(){calc.addDigit('7');})">7</button></li>
+			<li><button id="8" onclick="(function(){calc.addDigit('8');})">8</button></li>
+			<li><button id="9" onclick="(function(){calc.addDigit('9');})">9</button></li>
+		</ul>
+		<ul id="operators">
+			<li><button id="sum" onclick="(function(){calc.addOperator('+');})">+</button></li>
+			<li><button id="sub" onclick="(function(){calc.addOperator('-');})">-</button></li>
+			<li><button id="div" onclick="(function(){calc.addOperator('/');})">/</button></li>
+			<li><button id="mul" onclick="(function(){calc.addOperator('*');})">*</button></li>
+			<li><button id="result" onclick="calc.showResult()">=</button></li>
+		</ul>
+	</body>
+</html>

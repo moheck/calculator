@@ -1,6 +1,7 @@
 var CalculatorState = (function () {
     function CalculatorState(displayValue) {
         this.displayValue = displayValue;
+        document.getElementById("display").innerHTML = this.displayValue;
     }
     return CalculatorState;
 }());
@@ -42,3 +43,4 @@ var Calculator = (function () {
     };
     return Calculator;
 }());
+var calc = new Calculator();

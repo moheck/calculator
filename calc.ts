@@ -4,6 +4,7 @@ class CalculatorState {
 
 	constructor(displayValue: string) {
 		this.displayValue = displayValue;
+		document.getElementById("display").innerHTML = this.displayValue; 
 	}
 
 }
@@ -56,3 +57,5 @@ class Calculator {
 		}
 	}
 }
+
+var calc = new Calculator();
